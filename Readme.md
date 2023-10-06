@@ -4,9 +4,9 @@ Este projeto consiste em um site interativo sobre o anime One Piece, onde os usu
 
 ## Tecnologias Utilizadas
 
-- HTML
-- CSS
-- JavaScript
+![CSS3](https://img.shields.io/badge/CSS3-fff?style=for-the-badge&logo=css3&logoColor=264CE4)
+![HTML5](https://img.shields.io/badge/HTML5-fff?style=for-the-badge&logo=html5)
+![Javascript](https://img.shields.io/badge/javascript-fff?style=for-the-badge&logo=javascript)
 
 ## Funcionalidades
 
@@ -16,4 +16,4 @@ Este projeto consiste em um site interativo sobre o anime One Piece, onde os usu
 
 ## Como Visualizar
 
-Basta abrir o arquivo `index.html` em um navegador da web.
+Basta clicar em [One Piece (yan2024.github.io)](https://yan2024.github.io/projeto_one_piece/) que o site abrirá num navegador da web.
