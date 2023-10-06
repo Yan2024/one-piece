@@ -1,0 +1,76 @@
+@media(max-width: 769px) {/* a partir de que dimensão serão realizadas essas alterações */
+    main::after{ /* escolho os seletores que quero fazer a alteração */
+        background: linear-gradient(0deg, black 20%, rgba(0, 0, 0, 0.0) 65%) no-repeat; /* colocando o gradiente em baixo */
+        width: 100vw /* colocando 100% da largura */
+    }
+
+    main .personagem .imagem{
+        height: 50%;
+    }
+
+    .conteudo {
+        justify-content: flex-end; /* posiciona no fim do elemento */
+        left: 20px; /* 20 pixels da esquerda */
+        top: -20%; /* de baixa para cima */
+        max-width: 100vw; /* para ocupar toda a largura */
+        padding: 30px; /* espaço entre conteúdo e borda */
+
+        .nome-personagem{
+            font-size: 36px;
+        }
+
+        .descricao-personagem{
+            font-size: 15px;
+            max-width: 500px;
+        }
+    }
+
+    .botoes {
+        flex-direction: row; /* colocando os botões na horizontal */
+        align-items: flex-end; /* para posicionar no final da página */
+        width: 100%; /* ocupar 100% da largura visível */
+        padding: 60px
+    }
+    
+    .botoes .botao img{
+        max-width: 65px
+        }
+
+}
+
+@media(max-width: 425px) { /* tela de celular */
+    main .personagem .imagem{
+        height: auto; /* imagem no automático */
+    }
+
+    .conteudo{
+    top: -30%;
+    padding: 25px; /* espaço entre conteúdo e borda */
+
+        .nome-personagem{
+            font-size: 25px;
+        }
+
+        .descricao-personagem{
+            font-size: 15px;
+            max-width: 500px;
+        }
+
+        .logo-onepiece{
+            width: 190px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+    }    
+    
+    .botoes{
+        flex-direction: row; /* colocando os botões na horizontal */
+        align-items: flex-end; /* para posicionar no final da página */
+        width: 100%; /* ocupar 100% da largura visível */
+        top: -7%;
+    }
+    
+    .botoes .botao img{
+        max-width: 45px;
+        }
+}

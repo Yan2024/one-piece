@@ -1,0 +1,112 @@
+body {
+    background-color: #000000;
+    overflow: hidden;} /* para retirar a barra de rolagem */
+
+
+main::after {
+    content: ""; /* ou seja, acontece logo após o main */
+    /* por meio desse elemento:: é possível adicionar um elemento no site por meio do CSS */
+    /* background-color: aquamarine; */ 
+    /* coloca-se esse content e backgroud color previamente só para fins de visualização */
+    /* quando colocar o background gradiente, retira os emojis e a propriedade background-color */
+
+    position: fixed; /* fixo na tela */
+    top: 0; /* no topo da tela */
+    left: 0; /* na parte mais à esquerda da tela */
+    min-height: 100vh; /* vh: viewport height. 100% da altura */
+    min-width: 80vw; /* vw: viewport width. 80% da largura */
+    
+    /* site cssgradient.io: para adiconar gradiência */
+
+    background: linear-gradient(-233deg, black 40%, rgba(0, 0, 0, 0) 65%), no-repeat;
+    /* agora, vai lá no conteúdo e joga ele para cima com o z-index */
+}
+
+.personagem { /* todos que tiverem a classe personagem serão modificados */
+    display: none; /* não mostrar personagem */
+}
+
+.personagem.selecionado {  /* .selecionado é subclasse de personagem */
+    display: block; /* mostrar personagem.selecionado */
+}
+
+.personagem .imagem {/* a classe imagem refere-se a uma tag dentro da tag com personagem */
+    width: 100%;
+    height: 100%;
+    height: 100vh; /* viewport height, que significa que preenche toda a visão da tela de quem estiver acessando */
+    object-fit: cover; /* para a imagem não ficar retorcida quando, por exemplo, minimiza a tela */   
+}
+
+.conteudo {
+    position: absolute; /* deixa o elemento sobreposto de tudo na página (logo one piece, nome e descrição) */
+    top: 0; /* detalha a verticalmente (poderia ser down) */
+    left: 120px; /* detalha a horizontalmente (poderia ser right) */
+    
+    display:flex; /* torna o display flexível, podendo editá-lo de diversas formas */
+    flex-direction:column; /* retorna a orientação vertical */
+    min-height: 100vh; /* aumenta o tamanho do elemento para 100% da tela visível, para que na próxima propriedade possa centralizar */
+    justify-content: center; /* centralizando */
+    max-width: 380px; /* tamanho máximo da largura */
+    /* agora é retirado o background-color: orange; */
+    z-index: 1; 
+    /* deixando o conteúdo por cima da gradiência */
+    /* quanto maior o z-index, mais a frente fica o elemento */
+    /* é o eixo z: o eixo de profundidade */
+
+    .nome-personagem {
+        color: white;
+        font-size: 49px;
+        font-family: secular one;
+        font-weight: 250;
+        margin-bottom: 20px; /* espaçamento para baixo */
+    }
+
+    .descricao-personagem {
+        color: white;
+        font-family: "rubik";
+        line-height: 25px;
+    }
+
+    .logo-onepiece {
+        background-image: url("../imagens/one-piece-logo.png"); /* enquanto no html é ./ , no css é ../   */
+        background-size: cover;
+        height: 146px;
+        width: 260px;
+    }
+
+}
+
+.botoes {
+    position: fixed; /* fixo na tela */
+    top: 0;
+    right: 0;
+    /*background-color: orange;    /*só pra ver o elemento completo */
+    min-height: 100vh;
+    width: 200px;
+
+    display:flex; /* tornar o display flexível */
+    flex-direction: column; /* deixar vertical */
+    justify-content: center; /* deixar no centro verticalmente */
+    gap: 14px; /* deixar cada botão espaçado do outro */
+    align-items: center; /* deixar no centro horizontalmente*/
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .botao{
+        border: none; /* retira aquelas bordas brancas */
+        background: black; /* retira aquele fundo branco */
+        cursor: pointer; /* para que fique com a mãozinha ao passar por cima  */
+        border-radius: 50%; /* borda do botão redonda */
+        box-shadow: 0 0 2px #727272;
+    }
+
+    .botao img { /* exemplo de descendência */
+        border-radius: 50%; /* borda da imagem redonda */
+        max-width: 80px; /* tamanho de cada imagem */
+    }
+
+    .botao.selecionado{
+        transform: scale(1.3); /* função scale para deixar o elemento selecionado maior */
+        box-shadow: 0 0 20px #727272; /* sombra na borda */
+    }
+
+}
