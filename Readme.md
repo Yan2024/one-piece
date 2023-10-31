@@ -16,4 +16,4 @@ Este projeto consiste em um site interativo sobre o anime One Piece, onde os usu
 
 ## Como Visualizar
 
-Basta clicar em [One Piece (yan2024.github.io)](https://yan2024.github.io/projeto_one_piece/) que o site abrirá num navegador da web.
+Basta clicar em [One Piece (yan2024.github.io)](https://yan2024.github.io/Projeto_One_Piece/) que o site abrirá num navegador da web.
